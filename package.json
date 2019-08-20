@@ -1,0 +1,25 @@
+{
+  "name": "coc-flow",
+  "version": "0.0.1",
+  "description": "coc.nvim elixir extension",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf lib/",
+    "build": "webpack",
+    "lint": "eslint ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.2.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "flow-bin": "^0.105.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
+}
