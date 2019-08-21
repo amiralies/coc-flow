@@ -1,13 +1,23 @@
 {
   "name": "coc-flow",
   "version": "0.0.1",
-  "description": "coc.nvim elixir extension",
+  "description": "coc.nvim flow extension",
   "main": "lib/index.js",
+  "keywords": [
+    "coc.nvim",
+    "vim",
+    "flow",
+    "lsp"
+  ],
   "scripts": {
     "clean": "rm -rf lib/",
     "build": "webpack",
     "lint": "eslint .",
     "prepack": "npm run clean && npm run build"
+  },
+  "author": {
+    "name": "Amirali Esmaeili",
+    "email": "esmailiamirali@gmail.com"
   },
   "license": "MIT",
   "devDependencies": {
