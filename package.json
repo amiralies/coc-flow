@@ -9,12 +9,14 @@
     "flow",
     "lsp"
   ],
+  "homepage": "https://github.com/amiralies/coc-flow#readme",
   "scripts": {
     "clean": "rm -rf lib/",
     "build": "webpack",
     "lint": "eslint .",
     "prepack": "npm run clean && npm run build"
   },
+  "repository": "github:amiralies/coc-elixir",
   "author": {
     "name": "Amirali Esmaeili",
     "email": "esmailiamirali@gmail.com"
