@@ -15,6 +15,7 @@
     "@babel/preset-flow": "^7.0.0",
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
+    "coc.nvim": "^0.0.73",
     "eslint": "^6.2.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "2.18.2",
