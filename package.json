@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rm -rf lib/",
     "build": "webpack",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepack": "npm run clean && npm run build"
   },
   "license": "MIT",
   "devDependencies": {
