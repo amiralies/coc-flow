@@ -1,6 +1,6 @@
 {
   "name": "coc-flow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "coc.nvim flow extension",
   "main": "lib/index.js",
   "keywords": [
@@ -22,6 +22,9 @@
     "email": "esmailiamirali@gmail.com"
   },
   "license": "MIT",
+  "engines": {
+    "coc": "^0.0.4"
+  },
   "activationEvents": [
     "onLanguage:javascript",
     "onLanguage:javascriptreact",
