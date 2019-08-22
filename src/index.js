@@ -8,6 +8,7 @@ type Config = {|
   +pathToFlow: string,
   +useNPMPackagedFlow: boolean,
   +stopFlowOnExit: boolean,
+  +lazyMode: '' | 'fs' | 'watchman' | 'ide' | 'none',
 |};
 
 const getFlowCommand = (config: Config): string => {
@@ -19,7 +20,12 @@ const getFlowCommand = (config: Config): string => {
   return config.pathToFlow;
 };
 
-const getFlowArgs = (config: Config): Array<string> => ['lsp', ...(config.stopFlowOnExit ? ['--autostop'] : [])];
+const getFlowArgs = (config: Config): Array<string> => {
+  const lsp = ['lsp'];
+  const autoStop = config.stopFlowOnExit ? ['--autostop'] : [];
+  const lazyMode = config.lazyMode.length > 0 ? ['--lazy-mode', config.lazyMode] : [];
+  return [lsp, autoStop, lazyMode].flatMap((x) => x);
+};
 
 export function activate(context: ExtensionContext) {
   const flowConfigPath = path.join(workspace.rootPath, '.flowconfig');

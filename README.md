@@ -29,6 +29,7 @@ Note: for coc installation instructions visit [`coc.nvim`](https://github.com/ne
 * `flow.pathToFlow` (default: `flow`) Absolute path to flow binary
 * `flow.useNPMPackagedFlow` (default: `true`) Use flow binary which exists in node_modules (recommended)
 * `flow.stopFlowOnExit` (default: `true`) Stop flow server on exit
+* `flow.lazyMode` (default: `''`) Which lazy mode to use, empty string will use lazy mode set in .flowconfig and any other value override that
 
 ## License
 
