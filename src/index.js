@@ -7,6 +7,7 @@ type Config = {|
   +enable: boolean,
   +pathToFlow: string,
   +useNPMPackagedFlow: boolean,
+  +stopFlowOnExit: boolean,
 |};
 
 const getFlowCommand = (config: Config): string => {
@@ -18,6 +19,8 @@ const getFlowCommand = (config: Config): string => {
   return config.pathToFlow;
 };
 
+const getFlowArgs = (config: Config): Array<string> => ['lsp', ...(config.stopFlowOnExit ? ['--autostop'] : [])];
+
 export function activate(context: ExtensionContext) {
   const flowConfigPath = path.join(workspace.rootPath, '.flowconfig');
   const config: Config = workspace.getConfiguration().get('flow', {});
@@ -27,7 +30,8 @@ export function activate(context: ExtensionContext) {
   }
 
   const command = getFlowCommand(config);
-  const serverOptions = { command, args: ['lsp'] };
+  const args = getFlowArgs(config);
+  const serverOptions = { command, args };
 
   const documentSelector = ['javascript', 'javascriptreact'].reduce(
     (prev, language) => [...prev, { language, scheme: 'file' }, { language, scheme: 'untitled' }],

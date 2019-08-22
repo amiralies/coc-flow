@@ -28,6 +28,7 @@ Note: for coc installation instructions visit [`coc.nvim`](https://github.com/ne
 * `flow.enable` (default: `true`) Enable flow extension
 * `flow.pathToFlow` (default: `flow`) Absolute path to flow binary
 * `flow.useNPMPackagedFlow` (default: `true`) Use flow binary which exists in node_modules (recommended)
+* `flow.stopFlowOnExit` (default: `true`) Stop flow server on exit
 
 ## License
 

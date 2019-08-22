@@ -36,6 +36,11 @@
           "type": "boolean",
           "default": true,
           "description": "Use flow binary which exists in node_modules (recommended)"
+        },
+        "flow.stopFlowOnExit": {
+          "type": "boolean",
+          "default": true,
+          "description": "Stop flow server on exit"
         }
       }
     }
