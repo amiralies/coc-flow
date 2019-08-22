@@ -26,6 +26,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enable flow extension"
+        },
+        "flow.pathToFlow": {
+          "type": "string",
+          "default": "flow",
+          "description": "Absolute path to flow binary"
         }
       }
     }
