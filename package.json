@@ -1,6 +1,6 @@
 {
   "name": "coc-flow",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "coc.nvim flow extension",
   "main": "lib/index.js",
   "keywords": [
@@ -17,6 +17,19 @@
     "prepack": "npm run clean && npm run build"
   },
   "repository": "github:amiralies/coc-flow",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Flow configuration",
+      "properties": {
+        "flow.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable flow extension"
+        }
+      }
+    }
+  },
   "author": {
     "name": "Amirali Esmaeili",
     "email": "esmailiamirali@gmail.com"

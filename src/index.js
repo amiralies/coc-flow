@@ -6,8 +6,9 @@ import path from 'path';
 exports.activate = (context: ExtensionContext) => {
   const flowConfigPath = path.join(workspace.rootPath, '.flowconfig');
   const flowBinPath = path.join(workspace.rootPath, 'node_modules', '.bin', 'flow');
+  const config = workspace.getConfiguration().get('flow', {});
 
-  if (!fs.existsSync(flowConfigPath)) {
+  if (!fs.existsSync(flowConfigPath) || config.enable === false) {
     return;
   }
 
