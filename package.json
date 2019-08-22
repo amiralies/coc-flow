@@ -31,6 +31,11 @@
           "type": "string",
           "default": "flow",
           "description": "Absolute path to flow binary"
+        },
+        "flow.useNPMPackagedFlow": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use flow binary which exists in node_modules (recommended)"
         }
       }
     }

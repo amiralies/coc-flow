@@ -6,11 +6,12 @@ import path from 'path';
 type Config = {|
   +enable: boolean,
   +pathToFlow: string,
+  +useNPMPackagedFlow: boolean,
 |};
 
 const getFlowCommand = (config: Config): string => {
   const defaultFlowBinPath = path.join(workspace.rootPath, 'node_modules', '.bin', 'flow');
-  if (fs.existsSync(defaultFlowBinPath)) {
+  if (config.useNPMPackagedFlow && fs.existsSync(defaultFlowBinPath)) {
     return defaultFlowBinPath;
   }
 
