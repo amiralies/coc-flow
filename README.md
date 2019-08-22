@@ -1,4 +1,4 @@
-# coc-elixir (wip)
+# coc-flow (wip)
 
 Flow language server extension for [`coc.nvim`](https://github.com/neoclide/coc.nvim).
 

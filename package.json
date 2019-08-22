@@ -1,6 +1,6 @@
 {
   "name": "coc-flow",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "coc.nvim flow extension",
   "main": "lib/index.js",
   "keywords": [
@@ -16,7 +16,7 @@
     "lint": "eslint .",
     "prepack": "npm run clean && npm run build"
   },
-  "repository": "github:amiralies/coc-elixir",
+  "repository": "github:amiralies/coc-flow",
   "author": {
     "name": "Amirali Esmaeili",
     "email": "esmailiamirali@gmail.com"
