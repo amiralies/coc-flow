@@ -18,7 +18,7 @@ const getFlowCommand = (config: Config): string => {
   return config.pathToFlow;
 };
 
-exports.activate = (context: ExtensionContext) => {
+export function activate(context: ExtensionContext) {
   const flowConfigPath = path.join(workspace.rootPath, '.flowconfig');
   const config: Config = workspace.getConfiguration().get('flow', {});
 
@@ -40,4 +40,4 @@ exports.activate = (context: ExtensionContext) => {
 
   const languageClient = new LanguageClient('flow', 'Flow', serverOptions, clientOptions);
   context.subscriptions.push(services.registLanguageClient(languageClient));
-};
+}
