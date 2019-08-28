@@ -24,7 +24,7 @@ const getFlowArgs = (config: Config): Array<string> => {
   const lsp = ['lsp'];
   const autoStop = config.stopFlowOnExit ? ['--autostop'] : [];
   const lazyMode = config.lazyMode.length > 0 ? ['--lazy-mode', config.lazyMode] : [];
-  return [lsp, autoStop, lazyMode].flatMap((x) => x);
+  return [lsp, autoStop, lazyMode].reduce((prev, argSet) => [...prev, ...argSet], []);
 };
 
 export function activate(context: ExtensionContext) {
