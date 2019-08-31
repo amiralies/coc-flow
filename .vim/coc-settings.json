@@ -1,5 +1,3 @@
 {
-  "javascript.validate.enable": false,
-  "typescript.validate.enable": false
+  "tsserver.enable": false
 }
-
