@@ -15,7 +15,7 @@ Note: for coc installation instructions visit [`coc.nvim`](https://github.com/ne
 ## Setup
 * Make sure you have `.flowconfig` inside your project root.
 * By default coc-flow looks for flow binary inside your node_modules (as flow [recommends](https://flow.org/en/docs/install) it), as fallback it uses `flow.pathToFlow`, you can toggle this behavior using `flow.useNPMPackagedFlow` option.
-* If you're suing [coc-tsserver](https://github.com/neoclide/coc-tsserver), set `javascript.validate.enable` option to `false`.
+* If you're using [coc-tsserver](https://github.com/neoclide/coc-tsserver), set `javascript.validate.enable` option to `false`, or completely disable tsserver extension by setting `tsserver.enable` to `false`.
 
 ## Features
 * Code completion
