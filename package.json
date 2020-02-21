@@ -15,7 +15,7 @@
     "build": "webpack",
     "lint": "eslint .",
     "prepack": "npm run clean && npm run build",
-    "prepare": "npx npm-run-all clean build"
+    "prepare": "npm run clean && npm run build"
   },
   "repository": "github:amiralies/coc-flow",
   "contributes": {
