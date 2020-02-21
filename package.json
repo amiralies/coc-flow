@@ -19,6 +19,22 @@
   },
   "repository": "github:amiralies/coc-flow",
   "contributes": {
+    "rootPatterns": [
+      {
+        "filetype": "javascript",
+        "patterns": [
+          "package.json",
+          ".flowconfig"
+        ]
+      },
+      {
+        "filetype": "javascriptreact",
+        "patterns": [
+          "package.json",
+          ".flowconfig"
+        ]
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Flow configuration",
