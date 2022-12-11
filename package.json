@@ -1,6 +1,6 @@
 {
   "name": "coc-flow",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "coc.nvim flow extension",
   "main": "lib/index.js",
   "keywords": [
