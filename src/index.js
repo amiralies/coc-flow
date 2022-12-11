@@ -1,5 +1,5 @@
 // @flow
-import { LanguageClient, workspace, services, ExtensionContext } from 'coc.nvim';
+import { LanguageClient, workspace, services } from 'coc.nvim';
 import fs from 'fs';
 import path from 'path';
 
@@ -27,7 +27,7 @@ const getFlowArgs = (config: Config): Array<string> => {
   return [lsp, autoStop, lazyMode].reduce((prev, argSet) => [...prev, ...argSet], []);
 };
 
-export function activate(context: ExtensionContext) {
+export function activate(context: Object) {
   const flowConfigPath = path.join(workspace.rootPath, '.flowconfig');
   const config: Config = workspace.getConfiguration().get('flow', {});
 
